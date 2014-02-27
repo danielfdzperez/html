@@ -95,7 +95,7 @@ div #encabezado{
   float:right;
   position: relative;
   top: -19px;
-  margin-right: 0px;
+  margin-right: -28px;
 }
 
 div#redes_sociales{
@@ -116,15 +116,26 @@ div#redes_sociales{
 
 .Txt-redes1-izq{
   float:left;
-  font-size:20px; 
+  font-size:30px;
+  margin-left:-270px;
+  margin-top:16px;
+  margin-bottom:0px;
 }
 
+.Txt-redes1-izq-arriba{
+    float:left;
+    margin-left:270px;
+    font-size:12px;
+    margin-top:10px;
+    font-weight:bold;
+}
 .Txt-redes1-derecha{
   list-style-type:none;
   text-align:right;
   float:right;
-  font-size:10px;
-  padding-right:20px;
+  font-size:12px;
+  margin-top:18px;
+  margin-right:24px;
 }
 
 #redes_2{
@@ -142,7 +153,7 @@ div#redes_sociales{
   position: relative;
   z-index: 0;
   top:10px;
-  right:-48px;
+  right:-42px;
 }
 
 /*-------Nosotros-------------*/
