@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="css/general.css">
+    <script src="javascript/menu_desplegable.js"></script>
+    <title>Tecnologias de acceso a la red</title>
+</head>
+<body>
+  <div id="pagina"> 
+    <div id="logo">
+      LOGO
+    </div>
+
+    <div id="menu">
+      <ul>
+        <li> 
+	  <a href="#" onmouseover="abrir_menu('desplegable_1')" onmouseout="mclosetime()">Inicio</a>
+	  <div id="desplegable_1" onmouseover="mcancelclosetime()" onmouseout="mclosetime()">
+	  <a href="">prueba</a>
+	  <a href="">prueba2</a>
+	  </div>
+	</li>
+        <li> 
+	  <a href="#" onmouseover="abrir_menu('desplegable_2')" onmouseout="mclosetime()">Protocolos</a>
+	  <div id="desplegable_2" onmouseover="mcancelclosetime()" onmouseout="mclosetime()">
+	  </div>
+	</li>
+	<li> 
+	  <a href="#" onmouseover="abrir_menu('desplegable_3')" onmouseout="mclosetime()">Tecnologías</a>
+	  <div id="desplegable_3" onmouseover="mcancelclosetime()" onmouseout="mclosetime()">
+	  </div>
+	</li>
+	<li> 
+	  <a href="#" onmouseover="abrir_menu('desplegable_4')" onmouseout="mclosetime()">Imágenes</a>
+	  <div id="desplegable_4" onmouseover="mcancelclosetime()" onmouseout="mclosetime()">
+	  </div>
+	</li>
+      </ul>
+    </div>
+    <div id = "info">
+        En esta página encontrarás una introducción acerca de las principales tecnologías de acceso a la red.
+        <div id = "img_prueba">
+	<button type="button" onclick="img_anterior()">&#60</button>
+	<button type="button" onclick="img_siguiente()">></button>
+	</div>
+    </div>
+    <div id = "elementos_adicionales">
+        <div id="c_def28aeaa9ef76ddc5e94aee1faac21b" class="ancho"></div>
+        <script src="http://www.eltiempo.es/widget/widget_loader/def28aeaa9ef76ddc5e94aee1faac21b"></script>
+    </div>
+    <div id = "pie_de_pagina">
+    Página creada por Daniel Fernandez
+    </div>
+  </div>
+</body>
+</html>
