@@ -8,51 +8,50 @@
     <title>Tecnologias de acceso a la red</title>
 </head>
 <body onload="redimensionar_logo()">
-  <div id="pagina"> 
-    <div id="logo">
-    
-
-    <div id="menu">
-      <ul>
-        <li> 
-	  <a href="#" onmouseover="abrir_menu('desplegable_1')" onmouseout="mclosetime()">Inicio</a>
-	  <div id="desplegable_1" onmouseover="mcancelclosetime()" onmouseout="mclosetime()">
-	  <a href="">prueba</a>
-	  <a href="">prueba2</a>
-	  </div>
-	</li>
-        <li> 
-	  <a href="#" onmouseover="abrir_menu('desplegable_2')" onmouseout="mclosetime()">Protocolos</a>
-	  <div id="desplegable_2" onmouseover="mcancelclosetime()" onmouseout="mclosetime()">
-	  </div>
-	</li>
-	<li> 
-	  <a href="#" onmouseover="abrir_menu('desplegable_3')" onmouseout="mclosetime()">Tecnologías</a>
-	  <div id="desplegable_3" onmouseover="mcancelclosetime()" onmouseout="mclosetime()">
-	  </div>
-	</li>
-	<li> 
-	  <a href="#" onmouseover="abrir_menu('desplegable_4')" onmouseout="mclosetime()">Imágenes</a>
-	  <div id="desplegable_4" onmouseover="mcancelclosetime()" onmouseout="mclosetime()">
-	  </div>
-	</li>
-      </ul>
+    <div id="pagina"> 
+        <div id="logo">
+            <div id="menu">
+                <ul>
+                    <li> 
+	                <div class="menu_principal">
+                            <a href="#" onmouseover="desplegar_menu('desplegable_1');" onmouseout="ocultar_menu();">Inicio</a>
+                            <div id="desplegable_1" class="submenu">
+                                <a href="">prueba</a>
+                                <a href="">prueba2</a>
+                            </div>
+	                </div>
+                    </li>
+                    <li>
+	                <div class="menu_principal">
+                            <a href="#" onmouseover="desplegar_menu('desplegable_2')" onmouseout="ocultar_menu()">Protocolos</a>
+	                </div>
+                        <div id="desplegable_2" class="submenu">
+                        </div>
+                    </li>
+                    <li>
+	                <div class="menu_principal">
+                            <a href="#" onmouseover="desplegar_menu('desplegable_3')" onmouseout="ocultar_menu()">Tecnologías</a>
+	                </div>
+                        <div id="desplegable_3" class="submenu">
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div id = "info">
+            En esta página encontrarás una introducción acerca de las principales tecnologías de acceso a la red.
+            <div id = "img_prueba">
+    	    <button type="button" onclick="img_anterior()">&#60</button>
+    	    <button type="button" onclick="img_siguiente()">></button>
+    	    </div>
+        </div>
+        <div id = "elementos_adicionales">
+            <div id="c_def28aeaa9ef76ddc5e94aee1faac21b" class="ancho"></div>
+            <script src="http://www.eltiempo.es/widget/widget_loader/def28aeaa9ef76ddc5e94aee1faac21b"></script>
+        </div>
+        <div id = "pie_de_pagina">
+            Página creada por Daniel Fernandez
+        </div>
     </div>
-    </div>
-    <div id = "info">
-        En esta página encontrarás una introducción acerca de las principales tecnologías de acceso a la red.
-        <div id = "img_prueba">
-	<button type="button" onclick="img_anterior()">&#60</button>
-	<button type="button" onclick="img_siguiente()">></button>
-	</div>
-    </div>
-    <div id = "elementos_adicionales">
-        <div id="c_def28aeaa9ef76ddc5e94aee1faac21b" class="ancho"></div>
-        <script src="http://www.eltiempo.es/widget/widget_loader/def28aeaa9ef76ddc5e94aee1faac21b"></script>
-    </div>
-    <div id = "pie_de_pagina">
-    Página creada por Daniel Fernandez
-    </div>
-  </div>
 </body>
 </html>

@@ -1,45 +1,16 @@
-var timeout	= 200 
-var closetimer	= 0 
-var ddmenuitem	= 0 
-
-// open hidden layer
-function abrir_menu(id)
-{	
-    // cancel close timer
-    mcancelclosetime() 
-
-    // close old layer
-    if(ddmenuitem) 
-	ddmenuitem.style.visibility = 'hidden' 
-
-    // get new layer and show it
-    ddmenuitem = document.getElementById(id) 
-    ddmenuitem.style.visibility = 'visible' 
-
-}
-// close showed layer
-function mclose()
-{
-    if(ddmenuitem)
-	ddmenuitem.style.visibility = 'hidden' 
-    
+var temporizador = 0
+var abrir
+function desplegar_menu(id){
+    clearTimeout(temporizador)
+    if(abrir)
+        abrir.style.visibility = 'hidden'	
+    abrir = document.getElementById(id)
+    abrir.style.visibility = 'visible'	
 }
 
-// go close timer
-function mclosetime()
-{
-    closetimer = window.setTimeout(mclose, timeout) 
+function ocultar_menu(){
+    temporizador = setTimeout(ocultalo, 2000)
+    function ocultalo(){
+            abrir.style.visibility = 'hidden'
+	}
 }
-
-// cancel close timer
-function mcancelclosetime()
-{
-    if(closetimer)
-    {
-	window.clearTimeout(closetimer) 
-	closetimer = null 
-    }
-}
-
-// close layer when click-out
-document.onclick = mclose  

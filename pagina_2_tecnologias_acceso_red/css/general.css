@@ -45,12 +45,13 @@
     border-color:#000;
     border-style:solid;
 }
+.submenu{
 
-#menu div{
     position: absolute;
     visibility: hidden;
 }
-#menu div a{
+
+.menu_principal div a{
     background-image:url("../images/fondo.jpg");
     background-size:150px 50px;
     background-repeat:no-repeat;
