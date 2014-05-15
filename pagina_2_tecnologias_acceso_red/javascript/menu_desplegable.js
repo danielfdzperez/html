@@ -1,6 +1,9 @@
 var temporizador = 0
 var abrir
 function desplegar_menu(id){
+
+    document.getElementById('menu').style.cursor = 'pointer'
+
     clearTimeout(temporizador)
     if(abrir)
         abrir.style.visibility = 'hidden'	
@@ -11,6 +14,7 @@ function desplegar_menu(id){
 function ocultar_menu(){
     temporizador = setTimeout(ocultalo, 2000)
     function ocultalo(){
+            document.getElementById('menu').style.cursor = 'auto'
             abrir.style.visibility = 'hidden'
 	}
 }

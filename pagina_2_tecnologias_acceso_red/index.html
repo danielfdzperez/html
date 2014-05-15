@@ -2,35 +2,44 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
+    <link href='images/logo.jpg' rel='shortcut icon' type='image/jpg'/>
     <link rel="stylesheet" type="text/css" href="css/general.css">
     <script src="javascript/menu_desplegable.js"></script>
     <script src="javascript/main.js"></script>
     <title>Tecnologias de acceso a la red</title>
 </head>
-<body onload="redimensionar_logo()">
+<body onload="mantener_activo('inicio', 'start'); cargar_pagina('docs/inicio.html', 'contenido'); redimensionar_logo();">
     <div id="pagina"> 
-        <div id="logo">
-            <div id="menu">
+        <div id="logo" onmouseover="redimensionar_logo()", onmouseout="redimensionar_logo()", onclick="redimensionar_logo()">
+            <div id="menu" >
                 <ul>
                     <li> 
-	                <div class="menu_principal">
-                            <a href="#" onmouseover="desplegar_menu('desplegable_1');" onmouseout="ocultar_menu();">Inicio</a>
+	                <div id="inicio" class="menu_principal" onmouseover="desplegar_menu('desplegable_1');" 
+			onmouseout="ocultar_menu();" onclick="mantener_activo(this); 
+			cargar_pagina('docs/inicio.html', 'contenido');">
+                            <p>Inicio</p>
                             <div id="desplegable_1" class="submenu">
-                                <a href="">prueba</a>
-                                <a href="">prueba2</a>
+                                <p>prueba</p>
+                                <p>prueba2</p>
                             </div>
 	                </div>
                     </li>
                     <li>
-	                <div class="menu_principal">
-                            <a href="#" onmouseover="desplegar_menu('desplegable_2')" onmouseout="ocultar_menu()">Protocolos</a>
-	                </div>
-                        <div id="desplegable_2" class="submenu">
-                        </div>
+	                <div class="menu_principal" onmouseover="desplegar_menu('desplegable_2')" onmouseout="ocultar_menu()"
+			onclick="mantener_activo(this);">
+                            <p >Tecnologías por cable</p>
+                            <div id="desplegable_2" class="submenu">
+		            <p onclick="cargar_pagina('docs/ethernet.html', 'contenido');">Ethernet</p>
+		            <p></p>
+		            <p></p>
+		            <p></p>
+                            </div>
+			</div>
                     </li>
                     <li>
-	                <div class="menu_principal">
-                            <a href="#" onmouseover="desplegar_menu('desplegable_3')" onmouseout="ocultar_menu()">Tecnologías</a>
+	                <div class="menu_principal" onmouseover="desplegar_menu('desplegable_3')" onmouseout="ocultar_menu()"
+			onclick="mantener_activo(this);">
+                            <p>Tecnologías</p>
 	                </div>
                         <div id="desplegable_3" class="submenu">
                         </div>
@@ -38,12 +47,7 @@
                 </ul>
             </div>
         </div>
-        <div id = "info">
-            En esta página encontrarás una introducción acerca de las principales tecnologías de acceso a la red.
-            <div id = "img_prueba">
-    	    <button type="button" onclick="img_anterior()">&#60</button>
-    	    <button type="button" onclick="img_siguiente()">></button>
-    	    </div>
+        <div id = "contenido">
         </div>
         <div id = "elementos_adicionales">
             <div id="c_def28aeaa9ef76ddc5e94aee1faac21b" class="ancho"></div>

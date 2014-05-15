@@ -11,7 +11,6 @@
 #logo{
     background-image: url("../images/logo.jpg");
     height:8%;
-    background-size:200px 150px;
     background-repeat:no-repeat;
 }
 #menu{
@@ -20,7 +19,6 @@
     border-style:solid;
     padding-top:8%;
 }
-
 #menu li{
     margin: 0px;
     /*background-color:#6A5ACD;*/
@@ -33,30 +31,34 @@
     font-weight:bold;
     display: inline-block;
 }
-#menu a{
+#menu p{
+    margin: 0;
     padding: 10px;
-    text-decoration: none;
     color:#FFF;
     
 }
-#menu a:hover{
+#menu p:hover{
+    background-image:url("../images/fondo.jpg");
+    background-size:150px 50px;
+    border-color:#000;
+}
+
+.menu_pricipal_activo{
     background-image:url("../images/fondo.jpg");
     background-size:150px 50px;
     border-color:#000;
     border-style:solid;
 }
 .submenu{
-
     position: absolute;
     visibility: hidden;
 }
 
-.menu_principal div a{
+.submenu p{
     background-image:url("../images/fondo.jpg");
     background-size:150px 50px;
     background-repeat:no-repeat;
-
-   display: block;
+    display: block;
 }
 #pie_de_pagina{
   text-align:right;

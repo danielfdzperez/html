@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ethernet</title>
+    <link rel="stylesheet" type="text/css" href="css/documentos.css">
+</head>
+<body>
+    <h1>Ethernet</h1>
+    <h3>Tabla de contenidos</h3>
+    <table>
+        <tr>
+            <td>
+	    <a href="#que es">¿Que es?</a>
+	    </td>
+        </tr>
+	<tr>
+	    <td>
+	    <a href="#como funciona">¿Como funciona?</a>
+	    </td>
+	</tr>
+	<tr>
+	    <td>
+	    <a href="#campos trama">Campos de la trama</a>
+	    </td>
+	</tr>
+	<tr>
+	    <td>
+	    <a href="#elementos">¿Que elementos componen la red?</a>
+	    </td>
+	</tr>
+	<tr>
+	    <td>
+	    <a href="#topologias">Topologías</a>
+	    </td>
+	</tr>
+	<tr>
+	    <td>
+	    <a href="#wan">Ethernet WAN</a>
+	    </td>
+	</tr>
+    </table>
+    <a name="que es">
+    <h2>¿Que es?</h2>  
+    <p>Es un estándar de redes de área local para ordenadores con acceso al medio por detección de la onda portadora y 
+    con detección de colisiones (CSMA/CD).</p>
+
+    <a name="como funciona">
+    <h2>¿Como funciona?</h2>
+    CSMA/CD:
+    <ol>
+        <li>Detección de portadora: Los equipos comprueban que no hay señal antes de enviar.</li>
+        <li> Acceso múltiple: Si hay mucha latencia se producirá una colisión.</li>
+        <li> Detección de colisiones: Los equipos a la escucha se enteran de la colisión.</li>
+        <li> Señal de congestión: Los equipos culpables de la colisión envían una señal de congestión para que los equipos que 
+             no se enteraron se enteren de la colisión.</li>
+        <li>Postegración aleatoria: Comienza un temporizador aleatorio para todos los equipos, 
+             y el primero que acabe comenzará a escuchar de nuevo.</li>
+    </ol>
+
+    <a name="campos trama">
+    <h2>Campos de la trama Ethernet</h2>
+    <dl>
+    <dt>Preámbulo(7bytes) y Delimitador de la trama(1byte):</dt>
+	<dd>Se utiliza para la sincronización de la trama. Indican al receptor que va a recibir una trama.</dd>
+	<dt>Mac destino(6bytes):</dt>
+	       <dd> Mac del receptor.</dd>
+	<dt>Mac origen(6bytes):</dt>
+		<dd>Mac del origen.</dd>
+	<dt>Longitud/TIpo(2bytes):</dt>
+		<dd>Indica el tipo de protocolo encapsulado o longitud de la trama.</dd>
+	<dt>Datos y Pad(46 a 1500 bytes)</dt>
+		<dd>Contiene los datos encapsulados de capa superior(Paquete).
+		El Pad se utiliza de relleno en caso de que el paquete tenga un tamaño menor a 64bytes.</dd>
+	<dt>Secuencia de verificación de la trama FCS (4bytes):</dt>
+                <dd>Detecta los errores en la trama, utilizando comprobación de redundancia cíclica (CRC).</dd>
+    </dl>
+    <a name="elementos">
+    <h2>¿Que elementos componen la red?</h2>
+    <p>Tarjeta de red, repetidores, concentradores, puentes, los conmutadores, los nodos de red y el medio de interconexión.</p> 
+
+    <p>Los nodos de red pueden clasificarse en dos grandes grupos: 
+    equipo terminal de datos (DTE) y equipo de comunicación de datos (DCE).</p>
+
+    <p>NIC, o Tarjeta de Interfaz de Red - Permite a un ordenador acceder a una red local. 
+    Cada tarjeta tiene una única dirección MAC que la identifica en la red.</p>
+
+    <p>Repetidor - Aumenta el alcance de una conexión física, recibiendo las señales y retransmitiéndolas, 
+    para evitar su degradación, a través del medio de transmisión, lográndose un alcance mayor. 
+    Opera en la capa física del modelo OSI.
+
+    <p>Concentrador o hub - Funciona como un repetidor pero permite la interconexión de múltiples nodos. 
+    Su funcionamiento es relativamente simple pues recibe una trama de ethernet, por uno de sus puertos, 
+    y la repite por todos sus puertos restantes sin ejecutar ningún proceso sobre las mismas. 
+    Opera en la capa física del modelo OSI.</p>
+
+    <p>Puente o bridge - Interconecta segmentos de red haciendo el cambio de frames (tramas)
+    entre las redes de acuerdo con una tabla de direcciones que le dice en qué segmento está ubicada una dirección MAC dada. 
+    Se diseñan para uso entre LAN's que usan protocolos idénticos en la capa física y MAC (de acceso al medio). 
+    Aunque existen bridges más sofisticados que permiten la conversión de formatos MAC diferentes 
+    (Ethernet-Token Ring por ejemplo).</p>
+
+    <p>Conmutador o Switch - Funciona como el bridge, pero permite la interconexión de múltiples segmentos de red, 
+    funciona en velocidades más rápidas y es más sofisticado. Los switches pueden tener otras funcionalidades, 
+    como Redes virtuales, y permiten su configuración a través de la propia red. 
+    Funciona básicamente en la capa 2 del modelo OSI (enlace de datos). 
+    Por esto son capaces de procesar información de las tramas; su funcionalidad más importante es en las tablas de dirección. 
+    Por ejemplo, una computadora conectada al puerto 1 del conmutador envía una trama a otra computadora conectada al puerto 2; 
+    el switch recibe la trama y la transmite a todos sus puertos, excepto aquel por donde la recibió; 
+    la computadora 2 recibirá el mensaje y eventualmente lo responderá, generando tráfico en el sentido contrario; 
+    ahora el switch conocerá las direcciones MAC de las computadoras en el puerto 1 y 2; 
+    cuando reciba otra trama con dirección de destino de alguna de ellas, 
+    sólo transmitirá la trama a dicho puerto disminuyendo así el tráfico de la red y 
+    contribuyendo al buen funcionamiento de la misma.</p>
+
+    <p>Un router -  Es un dispositivo que proporciona conectividad a nivel de red o nivel tres en el modelo OSI. 
+    Su función principal consiste en enviar o encaminar paquetes de datos de una red a otra, es decir, 
+    interconectar subredes, entendiendo por subred un conjunto de máquinas IP que se pueden comunicar sin la intervención 
+    de un encaminador (mediante bridges), y que por tanto tienen prefijos de red distintos. 
+    Es el encargado de conectar redes diferentes.</p>
+
+    <a name="topologias">
+    <h2>Topologías</h2>
+
+    <h3>Físicas</h3>
+    <p>Como están conectados los equipos físicamente.</p>
+
+    <p>	Punto a punto: Dos nodos conectados directamente.</p>
+
+    <p>	Acceso múltiple / En bús: Todos los nodos comparten el mismo medio.</p>
+
+    <p>	Anillo: Los nodos se conectan a sus vecinos y crean un anillo.</p>
+
+    <p>	Estrella: Todos los nodos están conectados a un núcleo central.</p>
+
+    <p>	Estrella extendida: Igual que la estrella pero muchas estrellas se conectan a un nodo central.</p>
+
+    <p>	Malla:Conexión total entre todos los nodos.</p>
+
+    <h3>Lógicas</h3>
+    <p>	Como se mueven los datos dentro de la red.</p>
+    
+    <p>	Punto a punto: Se crea un circuito virtual  entre dos equipos, 
+        de esta forma es como si estuvieran conectados directamente.</p>
+    
+    <p>	Multiacceso/En bús: como si los nodos transmitan por el mismo medio.</p>
+   
+    <p>	Anillo:Transmiten por turnos los equipos.</p>
+
+    <a name="wan">
+    <h2>Ethernet WAN</h2>
+
+    <p>Ethernet se planteó en un principio como un protocolo destinado a cubrir las necesidades de las redes LAN. 
+    A partir de 2001 Ethernet alcanzó los 10 Gbit/s lo que dio mucha más popularidad a la tecnología. 
+    Dentro del sector se planteaba a ATM como la total encargada de los niveles superiores de la red, 
+    pero el estándar 802.3ae (Ethernet Gigabit 10) se ha situado en una buena posición para extenderse al nivel WAN.</p>
+</body>
+</html>
