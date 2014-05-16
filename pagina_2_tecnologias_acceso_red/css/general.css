@@ -1,6 +1,6 @@
-/*body{
- background-color:#000;
-}*/
+body{ 
+    overflow:hidden;
+}
 /*#pagina{
     border-style:solid;
     background-color:#FF0;
@@ -31,13 +31,13 @@
     font-weight:bold;
     display: inline-block;
 }
-#menu p{
+#menu div{
     margin: 0;
     padding: 10px;
     color:#FFF;
     
 }
-#menu p:hover{
+#menu div:hover{
     background-image:url("../images/fondo.jpg");
     background-size:150px 50px;
     border-color:#000;
@@ -50,13 +50,20 @@
     border-style:solid;
 }
 .submenu{
+    transition-property:height;
+    transition-duration:5s;
+    height:0;
+    overflow:hidden;
     position: absolute;
-    visibility: hidden;
+}
+.submenu{
+    /*position: absolute;*/
+    /*visibility: hidden;*/
 }
 
-.submenu p{
+.submenu div{
     background-image:url("../images/fondo.jpg");
-    background-size:150px 50px;
+    background-size:100% 100%;
     background-repeat:no-repeat;
     display: block;
 }
