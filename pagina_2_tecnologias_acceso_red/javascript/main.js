@@ -37,12 +37,10 @@ function mantener_activo(elemento){
 	menu_activo = document.getElementById(elemento)
     else
        menu_activo = elemento
-
     
-    
-       menu_activo.className = "menu_pricipal_activo"
+       menu_activo.className = "MenuActivo"
     function desactivar(){
-       menu_activo.className = "menu_pricipal"
+       menu_activo.className = "MenuPrincipal"
     }
 
 }

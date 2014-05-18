@@ -50,18 +50,15 @@ body{
     border-style:solid;
 }
 .submenu{
-    transition-property:height;
-    transition-duration:5s;
     height:0;
     overflow:hidden;
+    visibility:hidden;
     position: absolute;
-}
-.submenu{
-    /*position: absolute;*/
-    /*visibility: hidden;*/
 }
 
 .submenu div{
+    transition-property:height;
+    transition-duration:5s;
     background-image:url("../images/fondo.jpg");
     background-size:100% 100%;
     background-repeat:no-repeat;

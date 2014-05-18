@@ -1,6 +1,6 @@
 var temporizador = 0
 var abrir
-function desplegar_menu(id){
+function desplegar_menu(id, event){
 
     document.getElementById('menu').style.cursor = 'pointer'
 
@@ -8,12 +8,12 @@ function desplegar_menu(id){
     if(abrir){
           abrir.style.transitionDuration='1s'
           abrir.style.height = '0px'	
+          abrir.style.visibility = 'hidden'
     }
     abrir = document.getElementById(id)
-    /*abrir.style.visibility = 'visible'*/
+    abrir.style.visibility = 'visible'
     abrir.style.transitionDuration='5s'
     abrir.style.height = '100%'	
-    
 }
 
 function ocultar_menu(){
@@ -22,5 +22,6 @@ function ocultar_menu(){
             document.getElementById('menu').style.cursor = 'auto'
             abrir.style.transitionDuration='1s'
             abrir.style.height = '0'
+            abrir.style.visibility = 'hidden'
 	}
 }

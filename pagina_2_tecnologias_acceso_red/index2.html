@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <link href='images/logo.jpg' rel='shortcut icon' type='image/jpg'/>
+    <link rel="stylesheet" type="text/css" href="css/general.css">
+    <script src="javascript/menu_desplegable.js"></script>
+    <script src="javascript/main.js"></script>
+    <title>Tecnologias de acceso a la red</title>
+</head>
+<body onload="mantener_activo('inicio', 'start'); cargar_pagina('docs/inicio.html', 'contenido'); redimensionar_logo();">
+    <div id="pagina"> 
+        <div id="logo" onmouseover="redimensionar_logo()", onmouseout="redimensionar_logo()", onclick="redimensionar_logo()">
+            <div id="menu" >
+                <ul>
+                    <li> 
+	                <div id="inicio" class="menu_principal" onmouseover="desplegar_menu('desplegable_1', event);" 
+			onmouseout="ocultar_menu();" onclick="mantener_activo(this); 
+			cargar_pagina('docs/inicio.html', 'contenido');">
+                            Inicio
+                            <div id="desplegable_1" class="submenu">
+                                <div>prueba</div>
+                                <div>prueba2</div>
+                            </div>
+	                </div>
+                    </li>
+                    <li>
+	                <div class="menu_principal" onmouseover="desplegar_menu('desplegable_2', event)" 
+			onmouseout="ocultar_menu()"onclick="mantener_activo(this);">
+                            Tecnologías por cable
+                            <div id="desplegable_2" class="submenu">
+		            <div onclick="cargar_pagina('docs/ethernet.html', 'contenido');">Ethernet</div>
+		            <div></div>
+		            <div></div>
+		            <div></div>
+                            </div>
+			</div>
+                    </li>
+                    <li>
+	                <div class="menu_principal" onmouseover="desplegar_menu('desplegable_3', event)" onmouseout="ocultar_menu()"
+			onclick="mantener_activo(this);">
+                            Tecnologías
+	                </div>
+                        <div id="desplegable_3" class="submenu">
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div id = "contenido">
+        </div>
+        <div id = "elementos_adicionales">
+            <div id="c_def28aeaa9ef76ddc5e94aee1faac21b" class="ancho"></div>
+            <script src="http://www.eltiempo.es/widget/widget_loader/def28aeaa9ef76ddc5e94aee1faac21b"></script>
+        </div>
+        <div id = "pie_de_pagina">
+            Página creada por Daniel Fernandez
+        </div>
+    </div>
+</body>
+</html>

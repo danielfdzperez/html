@@ -1,0 +1,34 @@
+
+body div{
+   border:solid;
+}
+#menu li{
+    display:inline-flex;
+    list-style:none; 
+}
+#menu{
+    text-align: center;
+    height:100px;
+    background-color:white;
+    background:url("../images/logo.jpg");
+    background-size:100% 100%;
+    background-repeat:no-repeat;
+}
+.MenuPrincipal, .MenuActivo{
+         margin-top:70px;
+         background-color:white;
+         position:relative;
+         z-index:10;
+         height:20px;
+         overflow:hidden;
+	 border-style:solid;
+	 transition-property:height;
+	 transition-duration:5s;
+}
+.MenuActivo{
+    background-color:blue;
+
+}
+.MenuPrincipal:hover, .MenuActivo:hover {
+height:40px;
+}
