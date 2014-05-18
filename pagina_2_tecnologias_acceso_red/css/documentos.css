@@ -1,6 +1,20 @@
-table {
+#contenido_externo table {
+  margin-left:35%;
+  margin-right:20%; 
+  text-align:center;
   border:solid;
 }
-table a{
+#contenido_externo table a{
     color:#000;
+}
+
+#contenido_externo{
+    padding-left:10%;
+    font-weight:bold;
+    font-family:Arial, "Times New Roman";
+    font-size:20px;
+    width:70%;
+}
+#contenido_externo h1, h2{
+    text-align:center;
 }

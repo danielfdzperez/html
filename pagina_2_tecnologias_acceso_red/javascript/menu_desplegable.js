@@ -1,19 +1,17 @@
 var temporizador = 0
 var abrir
-function desplegar_menu(id, event){
+function desplegar_menu(objeto, event){
 
     document.getElementById('menu').style.cursor = 'pointer'
 
     clearTimeout(temporizador)
     if(abrir){
-          abrir.style.transitionDuration='1s'
           abrir.style.height = '0px'	
           abrir.style.visibility = 'hidden'
     }
-    abrir = document.getElementById(id)
-    abrir.style.visibility = 'visible'
-    abrir.style.transitionDuration='5s'
-    abrir.style.height = '100%'	
+    abrir = objeto.id
+	alert(abrir)
+    abrir.style.height = '800px'	
 }
 
 function ocultar_menu(){
@@ -25,3 +23,4 @@ function ocultar_menu(){
             abrir.style.visibility = 'hidden'
 	}
 }
+

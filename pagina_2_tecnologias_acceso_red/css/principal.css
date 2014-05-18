@@ -1,34 +1,67 @@
-
-body div{
-   border:solid;
+body {
+margin:0;
+}
+body > div{
+    padding-top:10px;
 }
 #menu li{
     display:inline-flex;
     list-style:none; 
 }
 #menu{
+    border-bottom:5px solid transparent;
+    border-image:url(../images/borde.jpg) 30 30 stretch;
     text-align: center;
-    height:100px;
+    height:110px;
     background-color:white;
     background:url("../images/logo.jpg");
     background-size:100% 100%;
     background-repeat:no-repeat;
 }
 .MenuPrincipal, .MenuActivo{
-         margin-top:70px;
-         background-color:white;
-         position:relative;
-         z-index:10;
-         height:20px;
-         overflow:hidden;
-	 border-style:solid;
-	 transition-property:height;
-	 transition-duration:5s;
+     color:white;
+     background:url("../images/fondo.jpg");
+     background-size:100% 100%;
+     background-repeat:no-repeat; 
+     position:relative;
+     height:19px;
+     z-index:1;
+     overflow:hidden;
+     transition-property:height;
+     transition-duration:2s;
+     margin-bottom:-140px;
 }
 .MenuActivo{
-    background-color:blue;
-
+    border:5px solid transparent;
+    border-image:url(../images/borde.jpg) 30 30 stretch;
+    padding:4px 4px 4px 4px;
+    box-shadow: 10px 10px 20px #FFF; 
 }
-.MenuPrincipal:hover, .MenuActivo:hover {
-height:40px;
+.MenuPrincipal:hover, .MenuActivo:hover{
+    cursor:pointer;
+    margin-bottom:-140px;
+    z-index:10;
+}
+#m_cable:hover{
+    height:140px;
+}
+#m_inalambrico:hover{
+    height:70px;
+}
+#menu div div{
+    border-top:solid;
+}
+.Submenu:hover{
+    font-size:20px;
+}
+
+
+/*Cuerpo*/
+#cuerpo{
+   background-image:url('../images/fondo_contenidos.png');
+   background-size:120% 100%;
+   background-repeat:no-repeat; 
+}
+#pie_de_pagina{
+    text-align:right;
 }

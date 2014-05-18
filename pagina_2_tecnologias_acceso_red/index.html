@@ -8,21 +8,29 @@
     <script src="javascript/main.js"></script>
     <title>Tecnologias de acceso a la red</title>
 </head>
-<body>
+<body onload="mantener_activo('m_inicio', 'start'); cargar_pagina('docs/inicio.html', 'contenido');" >
     <div id ="menu">
         <ul>
             <li>
-                <div id="inicio" class="MenuPrincipal"><h4>Inicio</h4></div>
+                <div id="m_inicio" class="MenuPrincipal"  onclick="mantener_activo(this); 
+		cargar_pagina('docs/inicio.html', 'contenido');">Inicio</div>
             </li>
             <li>
-                <div class="MenuPrincipal">
-		  <h4> Tecnologias por cable</h4>
-		    <div class="Submenu">Ethernet</div>
-		    <div class="Submenu">RDSI</div>
+                <div id="m_cable" class="MenuPrincipal" onclick="mantener_activo(this);">
+		    Tecnologias por cable
+		    <div class="Submenu" onclick="cargar_pagina('docs/ethernet.html', 'contenido');">Ethernet</div>
+		    <div class="Submenu" onclick="cargar_pagina('docs/rdsi.html', 'contenido');" >RDSI</div>
+		    <div class="Submenu" onclick="cargar_pagina('docs/cable-modem.html', 'contenido');" >Cablemódem</div>
+		    <div class="Submenu" onclick="cargar_pagina('docs/rdsi.html', 'contenido');" >RDSI</div>
+		    <div class="Submenu" onclick="cargar_pagina('docs/rdsi.html', 'contenido');" >RDSI</div>
 		</div>
             </li>
             <li>
-                <div></div>
+                <div id="m_inalambrico" class="MenuPrincipal"onclick="mantener_activo(this);">
+		Tecnologías inalámbricas
+		    <div class="Submenu" onclick="cargar_pagina('docs/rdsi.html', 'contenido');" >RDSI</div>
+		    <div class="Submenu" onclick="cargar_pagina('docs/rdsi.html', 'contenido');" >RDSI</div>
+		</div>
             </li>
         </ul>
     </div>
