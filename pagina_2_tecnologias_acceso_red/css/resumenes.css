@@ -1,0 +1,31 @@
+#indice li {
+    list-style:none;
+}
+
+#ethernet {
+    border:5px solid transparent;
+    border-image:url(../images/borde.jpg) 30 30 stretch;
+     width:70px;
+    /* height:20px;*/
+     overflow:hidden;
+     transition-property:width; 
+     transition-duration:2s;
+}
+#pr div{
+  display:inline-block;
+}
+/*.Resumen{
+    position:relative;
+    margin-top: -25px;
+    margin-left:100px;
+}*/
+
+/*#ethernet:hover{
+    width:100%;
+}*/
+.Resumen {
+   background-color:white;
+   border-style:solid;
+   border-radius:15px;
+   width:800px;
+}

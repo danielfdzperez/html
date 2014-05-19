@@ -43,10 +43,10 @@ body > div{
     z-index:10;
 }
 #m_cable:hover{
-    height:140px;
+    height:120px;
 }
 #m_inalambrico:hover{
-    height:70px;
+    height:160px;
 }
 #menu div div{
     border-top:solid;

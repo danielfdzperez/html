@@ -10,10 +10,11 @@ function redimensionar_logo(){
    //document.getElementById("logo").style.height = medida;
 }
 
-
-function cargar_pagina(url, id){
+const BUBBLING_PHASE = 2
+function cargar_pagina(url, id, evento){
     var xhr = false
-
+    if(evento.eventPhase != BUBBLING_PHASE)
+	return
     if (window.XMLHttpRequest)// Para IE7+, Firefox, Chrome, Opera, Safari
 	xhr=new XMLHttpRequest()
 
