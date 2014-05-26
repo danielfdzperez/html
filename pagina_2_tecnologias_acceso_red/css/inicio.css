@@ -1,0 +1,30 @@
+#galeria{
+    width:150px; 
+    border-style:solid;
+    height:150px;
+}
+#galeria div{
+display:inline-block;
+}
+#imagen_principal{
+    position:absolute;
+    z-index:0;
+    width:150px;
+    height:150px;
+}
+#botones{
+    display:inline;
+    position:absolute;
+    overflow:hidden;
+    margin-top:120px;
+    text-align:center;
+    height:0;
+    width:150px;
+    transition-property:height; 
+    transition-duration:2s;
+    background-color:black;
+    opacity:0.5;
+}
+#galeria:hover  #botones{
+height:30px;
+}

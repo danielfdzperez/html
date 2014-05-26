@@ -2,13 +2,17 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title></title>
+    <link rel="stylesheet" type="text/css" href="css/inicio.css">
 </head>
 <body>
     En esta página encontrarás una introducción acerca de las principales tecnologías de acceso a la red.
-            <div id = "img_prueba">
-    	    <button type="button" onclick="img_anterior()">&#60</button>
-    	    <button type="button" onclick="img_siguiente()">></button>
+            <div id = "galeria" >
+	        <img id="imagen_principal" src="images/antena_3g.jpg" alt="no se ve">
+	        <div id="botones">
+    	        <button type="button" onclick="imagen_anterior()" >&#60</button>
+    	        <button type="button" id="pp" onclick="cambio_imagenes(this)" >=</button>
+    	        <button type="button" onclick="imagen_siguiente()">></button>
+	        </div>
     	    </div>
 </body>
 </html>
