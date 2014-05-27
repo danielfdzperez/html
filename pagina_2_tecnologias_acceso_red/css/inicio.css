@@ -1,7 +1,13 @@
+body, #galeria, #videos{
+display:inline-block;
+}
+p{
+    text-align:center;
+}
 #galeria{
-    width:150px; 
-    border-style:solid;
-    height:150px;
+    border:10px groove black;
+    width:500px; 
+    height:300px;
 }
 #galeria div{
 display:inline-block;
@@ -9,17 +15,17 @@ display:inline-block;
 #imagen_principal{
     position:absolute;
     z-index:0;
-    width:150px;
-    height:150px;
+    width:500px;
+    height:300px;
 }
 #botones{
     display:inline;
     position:absolute;
     overflow:hidden;
-    margin-top:120px;
+    margin-top:270px;
     text-align:center;
     height:0;
-    width:150px;
+    width:500px;
     transition-property:height; 
     transition-duration:2s;
     background-color:black;
@@ -27,4 +33,32 @@ display:inline-block;
 }
 #galeria:hover  #botones{
 height:30px;
+}
+#videos{
+    background-image:url("../images/borde.jpg");
+    border:10px groove black;
+    display:inline-block;
+}
+#videos h1{
+   text-align:center;
+}
+#botones_video{
+   text-align:center; 
+}
+#botones_video button{
+padding:0 30px 0 30px;
+margin:0 20px 0 20px;
+}
+#webgrafia{
+    width:500px;
+}
+#webgrafia h1{
+   text-align:center;
+}
+#webgrafia ul{
+    display:inline-block;
+}
+#webgrafia li{
+    list-style:none;
+    border-bottom:solid white;
 }

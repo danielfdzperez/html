@@ -12,35 +12,29 @@ function redimensionar_logo(){
 
 const BUBBLING_PHASE = 2
 function cargar_pagina(url, id, evento){
-    var xhr = false
     if(evento.eventPhase != BUBBLING_PHASE)
 	return
-    if (window.XMLHttpRequest)// Para IE7+, Firefox, Chrome, Opera, Safari
-	xhr=new XMLHttpRequest()
-
-    else// Para IE6, IE5
-	xhr=new ActiveXObject("Microsoft.XMLHTTP")
-
-    xhr.onreadystatechange = function () {
-        if (xhr.readyState == 4) 
-            document.getElementById(id).innerHTML = xhr.responseText
-    }
-    xhr.open('GET', url, true)
-    xhr.send()
+    var elemento = document.getElementById(id).src=url
+}
+function renderizar_iframe(obj){
+     obj.height = obj.contentWindow.document.body.scrollHeight + 100 + "px"
 }
 
 var menu_activo = null
-function mantener_activo(elemento){
+function mantener_activo(elemento, evento){
+    if(evento.eventPhase == 2)
+	return
+
     if(menu_activo)
 	desactivar(elemento)
 
-    if(arguments.length > 1)
+    if(arguments[1] == 'start')
 	menu_activo = document.getElementById(elemento)
     else
        menu_activo = elemento
     
        menu_activo.className = "MenuActivo"
 }
-    function desactivar(){
+function desactivar(){
        menu_activo.className = "MenuPrincipal"
-    }
+}

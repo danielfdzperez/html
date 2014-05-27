@@ -4,21 +4,19 @@
     <meta charset="UTF-8">
     <link href='images/logo.jpg' rel='shortcut icon' type='image/jpg'/>
     <link rel="stylesheet" type="text/css" href="css/principal.css">
-    <script src="javascript/galeria_imagenes.js"></script>
     <script src="javascript/menu_desplegable.js"></script>
     <script src="javascript/main.js"></script>
     <title>Tecnologias de acceso a la red</title>
 </head>
-<body onload="mantener_activo('m_inicio', 'start'); cargar_pagina('docs/inicio.html', 'contenido', event); iniciar_imagenes()">
+<body onload="mantener_activo('m_inicio', 'start'); cargar_pagina('docs/inicio.html', 'contenido', event);">
     <div id ="menu">
         <ul>
             <li>
-                <div id="m_inicio" class="MenuPrincipal"  onclick="mantener_activo(this); 
+                <div id="m_inicio" class="MenuPrincipal"  onclick="mantener_activo('m_inicio', 'start'); 
 		cargar_pagina('docs/inicio.html', 'contenido', event);">Inicio</div>
             </li>
             <li>
-                <div id="m_cable" class="MenuPrincipal" onclick="mantener_activo(this); 
-		cargar_pagina('docs/t_cable.html', 'contenido', event);">
+                <div id="m_cable" class="MenuPrincipal" onclick="mantener_activo(this, event);">
 		    Tecnologias por cable
 		    <div class="Submenu" onclick="cargar_pagina('docs/ethernet.html'   , 'contenido', event);" >Ethernet  </div>
 		    <div class="Submenu" onclick="cargar_pagina('docs/rdsi.html'       , 'contenido', event);" >RDSI      </div>
@@ -27,8 +25,7 @@
 		</div>
             </li>
             <li>
-                <div id="m_inalambrico" class="MenuPrincipal"onclick="mantener_activo(this); 
-		cargar_pagina('docs/t_inalambricas.html', 'contenido', event);">
+                <div id="m_inalambrico" class="MenuPrincipal" onclick="mantener_activo(this, event);">
 		Tecnologías inalámbricas
 		    <div class="Submenu" onclick="cargar_pagina('docs/3g.html'       ,'contenido', event);" >3G             </div>
 		    <div class="Submenu" onclick="cargar_pagina('docs/4g.html'       ,'contenido', event);" >4G             </div>
@@ -41,11 +38,9 @@
         </ul>
     </div>
     <div id="cuerpo">
-        <div id="contenido"></div>
-	<div id="elementos_adicionales">
-	    <div id="c_def28aeaa9ef76ddc5e94aee1faac21b" class="ancho"></div>
-            <script src="http://www.eltiempo.es/widget/widget_loader/def28aeaa9ef76ddc5e94aee1faac21b"></script>
-	</div>
+        <iframe id="contenido" width="100%" src="" frameborder="0" allowfullscreen 
+	onload="renderizar_iframe(this)"></iframe>
+	
 	<div id="pie_de_pagina">Página creada por Daniel Fernández</div>
     </div>
 </body>

@@ -2,17 +2,82 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" type="text/css" href="css/inicio.css">
+    <link href='../images/logo.jpg' rel='shortcut icon' type='image/jpg'/>
+    <link rel="stylesheet" type="text/css" href="../css/inicio.css">
+    <script src="../javascript/galeria_videos.js"></script>
+    <script src="../javascript/galeria_imagenes.js"></script>
 </head>
-<body>
-    En esta página encontrarás una introducción acerca de las principales tecnologías de acceso a la red.
-            <div id = "galeria" >
-	        <img id="imagen_principal" src="images/antena_3g.jpg" alt="no se ve">
+<body onload="cambio_videos(); iniciar_imagenes();">
+    <p>En esta página encontrarás información básica acerca de las tecnologías de acceso a la red, aquellas que conectan al 
+    isp con el usuario final</p>
+            <div id = "galeria" onload="alert('hola')">
+	        <img id="imagen_principal" src="../images/antena_3g.jpg" alt="no se ve" >
 	        <div id="botones">
-    	        <button type="button" onclick="imagen_anterior()" >&#60</button>
+    	        <button type="button" onclick="imagen_anterior()" >&#60-</button>
     	        <button type="button" id="pp" onclick="cambio_imagenes(this)" >=</button>
-    	        <button type="button" onclick="imagen_siguiente()">></button>
+    	        <button type="button" onclick="imagen_siguiente()">-></button>
 	        </div>
     	    </div>
+
+            <div id="videos">
+	        <h1>Videos</h1>
+	        <iframe id="pantalla_video" width="420" height="315" src="https://www.youtube.com/embed/mZUOKF6TYHo" 
+	        frameborder="0" allowfullscreen></iframe>
+                <div id="botones_video">
+    	        <button type="button" onclick="video_anterior()" >&#60-</button>
+    	        <button type="button" id="player_video" onclick="cambio_videos(this)" >=</button>
+    	        <button type="button" onclick="video_siguiente()">-></button>
+	        </div>
+	    </div>
+	    <div id="webgrafia">
+	        <h1>Webgrafía</h1>
+	        <ul>
+		   <li><a href="http://es.wikipedia.org/wiki/Ethernet">Ethernet</a></li>
+		   <li><a href="http://es.wikipedia.org/wiki/3G">3G</a></li>
+		   <li><a href="http://es.wikipedia.org/wiki/Telefon%C3%ADa_m%C3%B3vil_4G">4G</a></li>
+		   <li><a href="http://es.wikipedia.org/wiki/WiMAX">WiMax</a></li>
+		   <li>
+		       <a href="http://www.albentia.com/Docs/WP/ALB-W-000006spA4_Seguridad%20en%20redes%20WiMAX.pdf">WiMax</a>
+		   </li>
+		   <li><a href="http://es.wikipedia.org/wiki/Wi-Fi">wifi</a></li>
+		   <li><a href="http://es.wikipedia.org/wiki/Red_Digital_de_Servicios_Integrados">RDSI</a></li>
+		   <li>
+		       <a href="http://www.uoc.edu/mirador/mmt_mirador/mmt_contingut/mmt_xarxa_acces/mmt_castella/x_acces_xdsi_desc.htm?">RDSI</a>
+		   </li>
+		   <li><a href="http://thales.cica.es/rd/Recursos/rd97/Otros/52-3-o-rdsi.html">RDSI</a></li>
+		   <li><a href="http://es.wikipedia.org/wiki/L%C3%ADnea_de_abonado_digital">xDSL</a></li>
+		   <li><a href="http://wikitel.info/wiki/XDSL">xDSL</a></li>
+		   <li><a href="http://es.wikipedia.org/wiki/Cablem%C3%B3dem">Cablemódem</a></li>
+		   <li><a href="http://es.wikipedia.org/wiki/Internet_por_sat%C3%A9lite">Satélite</a></li>
+		   <li><a href="http://www.areatecnologia.com/telefonia-movil.htm">Telefonía móvil</a></li>
+		   <li><a href="http://es.wikipedia.org/wiki/Telefon%C3%ADa_m%C3%B3vil">Telefonía móvil</a></li>
+	        </ul>
+	        <ul>
+		   <li><a href=""></a>Holaaaaaaa</li>
+		   <li><a href=""></a></li>
+		   <li><a href=""></a></li>
+		   <li><a href=""></a>SDFS</li>
+		   <li><a href=""></a>ADF</li>
+		   <li><a href=""></a>AAA</li>
+		   <li><a href=""></a>UUUU</li>
+		   <li><a href=""></a></li>
+		   <li><a href=""></a></li>
+		   <li><a href=""></a></li>
+		   <li><a href=""></a></li>
+		   <li><a href=""></a></li>
+		   <li><a href=""></a></li>
+		   <li><a href=""></a></li>
+		   <li><a href=""></a></li>
+		   <li><a href=""></a></li>
+		   <li><a href=""></a></li>
+	        </ul>
+		</div>
+                <div id="elementos_adicionales">
+		   <a href="www.salesianosdosa.com">Colegio Santo Domingo Savio</a>
+		   <a href="www.teledai-dosa.blogspot.com">Blog Teledai-dosa</a>
+		   <v></v>
+	           <div id="c_def28aeaa9ef76ddc5e94aee1faac21b" class="ancho"></div>
+                   <script src="http://www.eltiempo.es/widget/widget_loader/def28aeaa9ef76ddc5e94aee1faac21b"></script>
+	        </div>
 </body>
 </html>
