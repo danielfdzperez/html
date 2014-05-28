@@ -1,7 +1,8 @@
-body, #galeria, #videos{
-display:inline-block;
+#galeria, #videos{
+    display:inline-block;
 }
 p{
+    font-weight:bold;
     text-align:center;
 }
 #galeria{
@@ -10,7 +11,7 @@ p{
     height:300px;
 }
 #galeria div{
-display:inline-block;
+    display:inline-block;
 }
 #imagen_principal{
     position:absolute;
@@ -32,7 +33,7 @@ display:inline-block;
     opacity:0.5;
 }
 #galeria:hover  #botones{
-height:30px;
+    height:30px;
 }
 #videos{
     background-image:url("../images/borde.jpg");
@@ -46,19 +47,29 @@ height:30px;
    text-align:center; 
 }
 #botones_video button{
-padding:0 30px 0 30px;
-margin:0 20px 0 20px;
+    padding:0 30px 0 30px;
+    margin:0 20px 0 20px;
 }
-#webgrafia{
+#webgrafia, #proveedores{
     width:500px;
 }
-#webgrafia h1{
+#webgrafia h1, #proveedores h1{
    text-align:center;
 }
-#webgrafia ul{
+#webgrafia ul, #proveedores ul{
     display:inline-block;
 }
-#webgrafia li{
+#webgrafia li, #proveedores li{
     list-style:none;
     border-bottom:solid white;
+}
+#webgrafia, #proveedores{
+    display:inline-block;
+}
+a{
+    color:black;
+    text-decoration:none;
+}
+.Encabezado h3{
+   font-size:15px;
 }
