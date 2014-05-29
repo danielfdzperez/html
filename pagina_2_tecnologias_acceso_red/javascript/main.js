@@ -3,12 +3,11 @@ function comprobar_navegador(){
 //if(!(navigator.userAgent.indexOf("Chrome") != -1 || navigator.userAgent.indexOf("Firefox") != -1))
     var mensaje = "Esta página ha sido diseñada para Firefox y Chrome. \n No se conoce el comportamiento de esta web con" + 
 	      " otro navegador.\n Para un correcto funcionamiento use Firefox o Chrome.\n Gracias."
-    if(navigator.userAgent.indexOf("MSIE") != -1){
+    if(navigator.userAgent.indexOf("MSIE") != -1)
         window.alert(mensaje)
-    }
-    if(navigator.userAgent.match(/Opera|OPR\//) || navigator.userAgent.indexOf("Firefox") != -1){
+    
+    if(navigator.userAgent.match(/Opera|OPR\//) || navigator.userAgent.indexOf("Safari") != -1)
         alert(mensaje)
-   }
 }
 /*window.onresize = redimensionar_logo;
 function redimensionar_logo(){
